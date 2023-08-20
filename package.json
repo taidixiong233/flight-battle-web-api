@@ -12,7 +12,7 @@
     "build": "npm run lint && tsc"
   },
   "author": "taidixiong233",
-  "license": "GPL",
+  "license": "Apache License 2.0",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
