@@ -3,4 +3,4 @@
 /dist
 /node_modules
 /logs
-/config.ts
+/src/config.ts
