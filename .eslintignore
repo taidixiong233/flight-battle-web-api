@@ -2,3 +2,5 @@
 /node_modules/*
 # 构建输出目录,无需lint
 /dist/*
+# 日志目录
+/logs/*
