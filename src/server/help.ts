@@ -80,5 +80,13 @@ export async function Init_help(app: Express, error: E) {
     }
   });
 
+  /**version */
+  app.post("/version", (_, res) =>
+    res.json({
+      version: config.version,
+      code: errorcode.success,
+      status: "ok",
+    })
+  );
   error.postLog("help模块加载完毕");
 }

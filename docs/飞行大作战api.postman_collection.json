@@ -505,6 +505,30 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "127.0.0.1:8083/version",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8083/version",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8083",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
