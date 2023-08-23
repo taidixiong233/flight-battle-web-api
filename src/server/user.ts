@@ -181,9 +181,9 @@ export async function Init_user(app: Express, error: Error) {
               status: "ok",
               data: {
                 QQid: uin,
-                type: 0,
-                allow: 2,
-                bulletN: 0,
+                type: type == undefined ? 0 : Number(type),
+                allow: allow == undefined ? 2 : Number(allow),
+                bulletN: bulletN == undefined ? 0 : Number(bulletN),
               },
             });
             return;
