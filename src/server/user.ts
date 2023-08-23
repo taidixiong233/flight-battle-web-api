@@ -147,7 +147,12 @@ export async function Init_user(app: Express, error: Error) {
     try {
       await authorization_token(req);
       //begin query
-      const { uin } = req.body as { uin: number };
+      const { uin, type, allow, bulletN } = req.body as {
+        uin: number;
+        type?: number;
+        allow?: number;
+        bulletN?: number;
+      };
       try {
         if (!uin || Number.isNaN(Number(uin))) {
           res.json({
@@ -168,7 +173,7 @@ export async function Init_user(app: Express, error: Error) {
             });
           } catch (err) {
             //begin create
-            await AddGameUserData(uin);
+            await AddGameUserData(uin, type, allow, bulletN);
 
             //successed
             res.json({
