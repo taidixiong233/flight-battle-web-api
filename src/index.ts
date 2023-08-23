@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Express } from "express";
 import BodyParser from "body-parser";
 import config from "./config";
 import Error from "tderrors";
@@ -10,7 +10,7 @@ import { Init_store } from "./server/store";
 import { Init_game } from "./server/game";
 
 export const error = new Error(path.join(__dirname, "../logs"));
-const app = express();
+const app: Express = express();
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: false }));
