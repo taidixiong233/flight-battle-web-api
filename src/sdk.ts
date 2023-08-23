@@ -55,3 +55,15 @@ export interface TransmitRes {
   fly_master_uin: number;
   fly_flying_time: number;
 }
+
+
+export enum things {
+  "纸飞机" = 101,
+  "木飞机",
+  "铁皮飞机",
+  "钢化飞机",
+  "窜天猴发射器" = 201,
+  "对天导弹发射器",
+  "多角度发射器",
+  "高精度发射器",
+}
