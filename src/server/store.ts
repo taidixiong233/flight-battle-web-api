@@ -69,12 +69,16 @@ export async function Init_store(app: Express, error: Error) {
             });
             return;
           } else {
-            await buy_thing(uin, things, userdata, gamedata);
+            const buyret = await buy_thing(uin, things, userdata, gamedata);
 
             //buy successed
             res.json({
               code: errorcode.success,
               status: "ok",
+              data: {
+                name: things[buyret.gameuser.type],
+                type: buyret.gameuser.type,
+              },
             });
             return;
           }
