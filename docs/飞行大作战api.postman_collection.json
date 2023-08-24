@@ -62,7 +62,7 @@
 						},
 						{
 							"key": "code",
-							"value": "001426",
+							"value": "728330",
 							"type": "text"
 						}
 					]
@@ -156,6 +156,17 @@
 						{
 							"key": "uin",
 							"value": "10001",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "343",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "allow",
+							"value": "121",
 							"type": "text"
 						}
 					]
@@ -258,7 +269,7 @@
 						},
 						{
 							"key": "score",
-							"value": "1000",
+							"value": "1000000",
 							"type": "text"
 						}
 					]
@@ -525,6 +536,27 @@
 					"port": "8083",
 					"path": [
 						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8083/stat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8083/stat",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8083",
+					"path": [
+						"stat"
 					]
 				}
 			},

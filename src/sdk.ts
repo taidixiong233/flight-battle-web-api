@@ -56,7 +56,6 @@ export interface TransmitRes {
   fly_flying_time: number;
 }
 
-
 export enum things {
   "纸飞机" = 101,
   "木飞机",
@@ -66,4 +65,23 @@ export enum things {
   "对天导弹发射器",
   "多角度发射器",
   "高精度发射器",
+}
+
+export interface Stat {
+  /**用户总数 */
+  user: number;
+  /**数据统计时间 */
+  time: number;
+  /**游戏账户数量 */
+  gameuser: number;
+  /**正在飞行的飞机数量 */
+  sky_flying: number;
+  /**飞行员数量 */
+  pilot: number;
+  /**炮兵数量 */
+  artillery: number;
+  /**总积分数量 */
+  all_score: number;
+  /**炮弹总数 */
+  all_bullet: number;
 }

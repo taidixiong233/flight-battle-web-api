@@ -8,6 +8,7 @@ import { Init_help } from "./server/help";
 import { Init_user } from "./server/user";
 import { Init_store } from "./server/store";
 import { Init_game } from "./server/game";
+import { Init_stat } from "./server/stat";
 
 export const error = new Error(path.join(__dirname, "../logs"));
 const app: Express = express();
@@ -48,6 +49,7 @@ error.once("开始加载服务", async () => {
   await Init_user(app, error);
   await Init_store(app, error);
   await Init_game(app, error);
+  await Init_stat(app, error);
 });
 
 export default app;
