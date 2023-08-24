@@ -65,8 +65,8 @@ async function GetNumber(
   mode: "pilot" | "artillery" | "user" | "gameuser" | "sky_flying"
 ): Promise<number> {
   const sqlcmd = {
-    pilot: `select COUNT(*) from game_user_a where allow = '3';`,
-    artillery: `select COUNT(*) from game_user_a where allow != '3';`,
+    pilot: `select COUNT(*) from game_user_a where allow != '3';`,
+    artillery: `select COUNT(*) from game_user_a where allow = '3';`,
     user: `select COUNT(*) from user;`,
     gameuser: `select COUNT(*) from game_user_a;`,
     sky_flying: `select COUNT(*) from game_a_sky;`,
