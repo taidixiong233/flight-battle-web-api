@@ -529,7 +529,7 @@ export async function transmit(
         await RemoveFlycraftFlying(choose_fly.QQid);
 
         //给攻击者加分
-        await SettingsUserCon(uin, choose_fly_info.score * 0.6);
+        await SettingsUserCon(uin, choose_fly_info.score * 0.6 + user.score);
         return new Promise((res) =>
           res({
             fly: false,
